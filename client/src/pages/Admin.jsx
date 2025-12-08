@@ -1,35 +1,4 @@
 // // client/src/pages/Admin.jsx
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-
-// export default function Admin() {
-//   const [users, setUsers] = useState([]);
-
-//   useEffect(() => {
-//     const load = async () => {
-//       try {
-//         const token = localStorage.getItem("token");
-//         const res = await axios.get("http://localhost:5000/api/admin/users", {
-//           headers: { Authorization: `Bearer ${token}` }
-//         });
-//         setUsers(res.data);
-//       } catch (err) { console.log(err); }
-//     };
-//     load();
-//   }, []);
-
-//   return (
-//     <div style={{ padding: 20 }}>
-//       <h2>Admin Panel</h2>
-//       <p>User Management (basic)</p>
-//       <table border="1" cellPadding="6">
-//         <thead><tr><th>ID</th><th>Username</th><th>Role</th></tr></thead>
-//         <tbody>{users.map(u => <tr key={u.id}><td>{u.id}</td><td>{u.username}</td><td>{u.role}</td></tr>)}</tbody>
-//       </table>
-//     </div>
-//   );
-// }
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
