@@ -1,168 +1,136 @@
-# Mini ERP & Finance System with AI Insights  
-### For Construction Industry – Devopod Assignment  
-Author: Deepak Panaganti
+Mini ERP & Finance System with AI Insights
+Devopod Assignment — Deepak Panaganti
 
----
 
-## 📌 Tech Stack
-- **Frontend:** React.js  
-- **Backend:** Node.js + Express  
-- **Database:** PostgreSQL  
-- **Auth:** JWT  
+🚀 Tech Stack
 
----
+Frontend: React.js
 
-## 📌 Project Overview
-A prototype **ERP + Finance system** designed for construction companies.  
-Includes core ERP features, finance management, and simple AI-driven insights.
+Backend: Node.js + Express
 
----
+Database: PostgreSQL
 
-## 🔹 Core ERP Features
-### 1. **User Management**
-- Login (JWT Authentication)  
-- Roles: Admin, Finance Manager, Project Manager  
+Auth: JWT
 
-### 2. **Admin Panel**
-- Manage users  
-- View system data  
+📌 Project Overview
 
-### 3. **Dashboard**
-- KPIs: Total projects, invoices, pending payments  
-- Alerts & insights  
+A prototype ERP + Finance Management System for the construction industry with:
 
----
+Core ERP workflow
 
-## 🔹 Finance Module
-### 1. **General Ledger**
-- Chart of Accounts (CRUD)
-- Journal Entries (Add)
-  
-### 2. **Accounts Receivable / Payable**
-- Vendor Management  
-- Invoice creation  
-- Payment status tracking  
+Finance module
 
-### 3. **Financial Dashboard**
-- Cash flow trend chart  
-- Budget vs Actual spend graph  
+AI-based insights (logic-based)
 
----
+Admin controls
 
-## 🔹 AI Insights (Logic-Based)
-### 1. **Predictive Risk Score**
-Based on:
-- Delayed invoices  
-- Budget overrun  
-- Progress mismatch  
-
-API Output Example:
-```json
-{ "project_id": 1, "risk_score": 72, "risk_level": "High" }
+Modern dark-themed UI
 
 
 
+✅ 1. Frontend (React.js)
+✔ Included Screens
 
+Login
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-1️⃣ Frontend (React.js)
-** Fully Responsive Screens Included
-
-Login Page
-
-Dashboard (KPIs + Insights)
-
-Financial Dashboard (Charts)
+Dashboard (KPIs + risk + cashflow + progress insights)
 
 Accounts (Chart of Accounts)
 
-Vendors Management
+Vendors
 
-Invoice Management
+Invoices
 
 Journal Entries
+
+Financial Dashboard (Charts)
 
 Admin Panel
 
 
-** Features
+✔ Features
 
 Axios API Integration
 
-Dark Theme UI with neon accents
+Fully responsive UI
 
-Interactive cards, charts, tables
+Neon dark theme
 
-Modern layout (premium, recruiter-friendly)
+Tables, forms, charts
+
+Smooth navigation
 
 
 
-2️⃣ Backend (Node.js + Express)
-** Backend Features
+✅ 2. Backend (Node.js + Express)
+✔ Features
 
 JWT Authentication
 
-Role-Based User Access
+Role-based access
 
 REST APIs for all modules
 
-AI Logic Layer (Risk Score, Cashflow, Progress)
+SQL + Business Logic
 
-SQL Query Integration
+AI Insight Engine (risk, cashflow, progress)
 
 
-** API Coverage
-Authentication
+✔ API Endpoints
+🔹 Authentication
+Method	Endpoint	Description
+POST	/api/auth/login	User login (JWT)
 
-POST /api/auth/login
+🔹 Accounts
+Method	Endpoint	Description
+GET	/api/accounts	Fetch all accounts
+POST	/api/accounts	Create account
 
-Accounts
+🔹 Vendors
 
-GET /api/accounts
+| GET | /api/vendors | Fetch vendors |
+| POST | /api/vendors | Create vendor |
 
-POST /api/accounts
+🔹 Invoices
 
-Vendors
+| GET | /api/finance/invoices | Fetch invoices |
+| POST | /api/finance/invoice | Create invoice |
 
-GET /api/vendors
+🔹 Journal Entries
 
-POST /api/vendors
+| GET | /api/finance/journal | Fetch journal entries |
+| POST | /api/finance/journal | Add journal entry |
 
-Invoices
+🔹 AI Insights
 
-GET /api/finance/invoices
-
-POST /api/finance/invoice
-
-Journal
-
-GET /api/finance/journal
-
-POST /api/finance/journal
-
-AI Insights
-
-GET /api/insights/risk/:projectId
-
-GET /api/insights/cashflow
-
-GET /api/insights/progress/:projectId
+| GET | /api/insights/risk/:id | Predict risk score |
+| GET | /api/insights/cashflow | Cashflow forecast |
+| GET | /api/insights/progress/:id | Progress deviation |
 
 
 
-3️⃣ SQL Database
+✅ 3. SQL Database
+
+✔ ER Diagram (Text Format)
+users (id, username, password, role)
+
+projects (id, name, planned_pct, actual_pct)
+project_progress (id, project_id, planned, actual, status)
+
+accounts (id, name)
+journal_entries (id, account, debit, credit, description)
+
+vendors (id, name)
+invoices (id, vendor_id, project_id, amount, status)
+
+risk_logs (id, project_id, risk_score, risk_level)
+
+exchange_rates (id, currency, rate)
+
+cashflow_history (id, month, amount)
+
+
+
 ## ENTITY–RELATIONSHIP DIAGRAM (ERD)
     ┌───────────────┐
     │     users     │
@@ -267,145 +235,112 @@ GET /api/insights/progress/:projectId
 
 
 
-** Tables Come With Sample Seed Data
+✔ Sample Data Included
 
-(Users, accounts, invoices, vendors, journal entries, etc.)
+Users
 
+Vendors
 
+Accounts
 
-4️⃣ Documentation (Exactly What They Expect)
+Invoices
 
-📘 API Documentation (Short & Professional)
-🔐 Authentication
-Method	Endpoint	Description
-POST	/api/auth/login	User login & JWT issue
+Journal entries
 
-🧾 Accounts
-Method	Endpoint	Description
-GET	/api/accounts	Fetch all accounts
-POST	/api/accounts	Create account
+Project progress
 
-🏢 Vendors
-Method	Endpoint	Description
-GET	/api/vendors	Get vendors
-POST	/api/vendors	Create vendor
-
-💰 Invoices
-Method	Endpoint	Description
-GET	/api/finance/invoices	Fetch invoices
-POST	/api/finance/invoice	Create invoice
-
-📘 Journal Entries
-Method	Endpoint	Description
-GET	/api/finance/journal	Fetch journal entries
-POST	/api/finance/journal	Add journal entry
-
-🤖 AI Insights
-Method	Endpoint	Description
-GET	/api/insights/risk/:id	Predictive project risk
-GET	/api/insights/cashflow	Cashflow projection
-GET	/api/insights/progress/:id	Progress deviation
+Cashflow history
 
 
 
-🚀 Setup Guide (For Recruiters & Evaluators)
-1️⃣ Clone the Repository
-git clone https://github.com/Deepak-Panaganti/fintrack.git
+✅ 4. Documentation (As Required)
 
-2️⃣ Backend Setup
+📘 Setup Guide
+Backend
 cd server
 npm install
 npm start
 
 
-Environment variables required:
+Environment variables:
 
 PORT=5000
 DB_HOST=localhost
 DB_USER=postgres
 DB_PASS=your_password
 DB_NAME=mini_erp
-JWT_SECRET=your_secret_key
+JWT_SECRET=your_secret
 
-3️⃣ Frontend Setup
+Frontend
 cd client
 npm install
 npm run dev
 
-4️⃣ Database Setup Instructions
-
-Open PostgreSQL
-
-Create database:
-
+Database
 CREATE DATABASE mini_erp;
 
 
-Run provided tables + insert sample data
-
-Start backend → verifies DB connection
-
-Start frontend → UI loads with sample content
+Run tables + seed-data.sql
+Backend will auto-connect and load sample data.
 
 
+⭐ Feature Summary
 
-🌟 Feature Explanation
-** Secure Login (JWT)
+🔐 Authentication
 
-Each user role sees different modules.
+JWT-secured backend
 
-** Dashboard KPIs
-
-Projects Count
-
-Invoices Count
-
-Pending Payments
-
-Risk Level
-
-Cashflow Forecast
-
-Project Progress Deviation
+Role-based module visibility
 
 
-** Finance Module
+📊 Dashboard
 
-Manage accounts
+Total projects
 
-Create invoices
+Total invoices
 
-Add journal entries
+Pending payments
 
-Vendor management
+AI risk level
+
+Cashflow prediction
+
+Project progress
+
+
+💰 Finance Module
+
+Chart of accounts
+
+Vendors
+
+Invoices
+
+Journal entries
 
 Financial charts
 
-Consistent dark theme UI
 
-
-** AI Insights
+🤖 AI Insights
 
 Risk Score → High / Medium / Low
 
-Cashflow Forecast → next month prediction
+Cashflow Forecast → next month projection
 
 Progress Analysis → planned vs actual
 
 
-
 🏁 Conclusion
 
-This Mini ERP successfully demonstrates:
+This project demonstrates:
 
-✔ Full-stack architecture
-✔ SQL database integration
-✔ Finance workflows
-✔ AI-based logic
-✔ Modern professional UI
+✔ Full-stack ERP architecture
+✔ SQL-backed finance workflows
+✔ AI insights for construction management
 ✔ Clean API structure
+✔ Professional modern UI
 
 
-This project showcases real-world ERP understanding suitable for DevOps, Full-stack, and cloud engineering roles.
+🙏 Thank You
 
-🙏 Thank You!
+Mini ERP & Finance System — Devopod Assignment
