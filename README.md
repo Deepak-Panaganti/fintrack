@@ -247,12 +247,19 @@ It provides:
 
 ## 🔧 Backend Setup
 
+```bash
+
 cd server
 npm install
 npm start
 <br>
 
+```
+
 ## 🧩 Environment Variables
+
+```bash
+
 PORT=5000
 DB_HOST=localhost
 DB_USER=postgres
@@ -260,20 +267,25 @@ DB_PASS=your_password
 DB_NAME=mini_erp
 JWT_SECRET=your_secret
 
+```
 <br>
 
-
 ## 💻 Frontend Setup
+
+```bash
 cd client
 npm install
 npm run dev
 
+```
 <br>
 
 
 ## 🗄 Database Setup
+```bash
 CREATE DATABASE mini_erp;
 
+```
 
 Run all tables + seed-data.sql to insert sample data.
 
@@ -286,50 +298,38 @@ Backend will auto-connect and load initial sample values.
 ## 🌟 Feature Summary
 🔐 Authentication
 
-JWT-secured backend
-
-Role-based module visibility
+- JWT-secured backend
+- Role-based module visibility
 
 <br>
 
 
 ## 📊 Dashboard
 
-Total projects
-
-Total invoices
-
-Pending payments
-
-AI risk level
-
-Cashflow prediction
-
-Progress deviation
+- Total projects
+- Total invoices
+- Pending payments
+- AI risk level
+- Cashflow prediction
+- Progress deviation
 
 <br>
 
 ## 💰 Finance Module
 
-Chart of accounts
-
-Vendors
-
-Invoices
-
-Journal entries
-
-Financial charts
+- Chart of accounts
+- Vendors
+- Invoices
+- Journal entries
+- Financial charts
 
 <br>
 
 ## 🤖 AI Insights
 
-Risk Score: High / Medium / Low
-
-Cashflow Forecast: next month prediction
-
-Progress Analysis: planned vs actual
+- Risk Score: High / Medium / Low
+- Cashflow Forecast: next month prediction
+- Progress Analysis: planned vs actual
 
 <br>
 
@@ -337,11 +337,12 @@ Progress Analysis: planned vs actual
 
 This Mini ERP demonstrates:
 
-✔ Full-stack ERP architecture
-✔ SQL-backed finance workflows
-✔ AI insights for construction management
-✔ Clean API structure
-✔ Professional dark UI
+- Full-stack ERP architecture 
+- SQL-backed finance workflows 
+- AI insights for construction management 
+- Clean API structure  
+- Professional dark UI  
+
 
 <br>
 
@@ -349,8 +350,3 @@ This Mini ERP demonstrates:
 Mini ERP & Finance System – Devopod Assignment Submission
 
 Developed by Deepak Panaganti
-
-
-
-
-
