@@ -3,7 +3,6 @@
 **Author:** Deepak Panaganti  
 
 ---
-
 <br>
 
 ## 🚀 **Tech Stack**
@@ -13,7 +12,6 @@
 - **Authentication:** JWT  
 
 ---
-
 <br>
 
 ## 📌 **Project Overview**
@@ -27,7 +25,6 @@ It provides:
 - Dark-themed modern UI  
 
 ---
-
 <br>
 
 # ✅ **1. Frontend (React.js)**  
@@ -252,9 +249,9 @@ It provides:
 cd server
 npm install
 npm start
-<br>
 
 ```
+<br>
 
 ## 🧩 Environment Variables
 
